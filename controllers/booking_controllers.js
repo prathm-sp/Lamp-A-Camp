@@ -55,7 +55,7 @@ exports.accept_a_booking = async (req, res) => {
     }
     if (booking.status == "Pending For Confirmation") {
       booking.status = "Confirmed and Pending For Payment";
-      booking.save();
+      await booking.save();
       res.send("Booking Confirmed Check Pending Payments Tab");
     } else {
       throw new Error("Booking Already Confirmed");

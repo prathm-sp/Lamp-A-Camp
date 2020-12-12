@@ -63,7 +63,7 @@ const campOwnerSchema = new mongoose.Schema(
       {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Bookings",
-        autopopulate: true,
+        // autopopulate: true,
       },
     ],
   },
@@ -106,6 +106,6 @@ campOwnerSchema.statics.findByCredentials = async function (email, pass) {
   }
 };
 
-campOwnerSchema.plugin(require("mongoose-autopopulate"));
+// campOwnerSchema.plugin(require("mongoose-autopopulate"));
 const CampOwner = mongoose.model("CampOwner", campOwnerSchema);
 module.exports = CampOwner;

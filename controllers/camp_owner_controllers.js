@@ -426,6 +426,7 @@ exports.upload_image = async (req, res) => {
 // };
 
 exports.get_pending_camps = async (req, res) => {
+  console.log("u=yes");
   try {
     const user = req.profile;
     if (user) {
